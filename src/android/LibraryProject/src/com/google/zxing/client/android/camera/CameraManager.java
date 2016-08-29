@@ -43,8 +43,8 @@ public final class CameraManager {
 
   private static final int MIN_FRAME_WIDTH = 220;
   private static final int MIN_FRAME_HEIGHT = 220;
-  private static final int MAX_FRAME_WIDTH = 880;
-  private static final int MAX_FRAME_HEIGHT = 680;
+  private static final int MAX_FRAME_WIDTH = 4000;
+  private static final int MAX_FRAME_HEIGHT = 4000;
 
   private final Context context;
   private final CameraConfigurationManager configManager;
@@ -215,13 +215,13 @@ public final class CameraManager {
         // Called early, before init even finished
         return null;
       }
-      int width = screenResolution.x * 3 / 4;
+      int width = screenResolution.x;
       if (width < MIN_FRAME_WIDTH) {
         width = MIN_FRAME_WIDTH;
       } else if (width > MAX_FRAME_WIDTH) {
         width = MAX_FRAME_WIDTH;
       }
-      int height = screenResolution.y * 3 / 4;
+      int height = screenResolution.y;
       if (height < MIN_FRAME_HEIGHT) {
         height = MIN_FRAME_HEIGHT;
       } else if (height > MAX_FRAME_HEIGHT) {
